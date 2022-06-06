@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@env/*": ["environments/*"],
+      "@christ-embassy/auth": ["libs/auth/src/index.ts"],
+      "@christ-embassy/core": ["libs/core/src/index.ts"],
+      "@christ-embassy/layout": ["libs/layout/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

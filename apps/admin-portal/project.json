@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/admin-portal",
         "index": "apps/admin-portal/src/index.html",
@@ -15,9 +17,17 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/admin-portal/src/favicon.ico",
-          "apps/admin-portal/src/assets"
+          "apps/admin-portal/src/assets",
+          {
+            "glob": "**/*",
+            "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+            "output": "/assets/"
+          }
         ],
-        "styles": ["apps/admin-portal/src/styles.scss"],
+        "styles": [
+          "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+          "apps/admin-portal/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -82,7 +92,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/admin-portal"],
+      "outputs": [
+        "coverage/apps/admin-portal"
+      ],
       "options": {
         "jestConfig": "apps/admin-portal/jest.config.ts",
         "passWithNoTests": true
