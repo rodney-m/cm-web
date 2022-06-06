@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { httpInterceptor, JwtInterceptor, UiLoader } from '@christ-embassy/core';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+import { RouterModule } from '@angular/router';
 
 
 registerLocaleData(en);
@@ -23,6 +24,7 @@ registerLocaleData(en);
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     AppRoutingModule,
+    RouterModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,

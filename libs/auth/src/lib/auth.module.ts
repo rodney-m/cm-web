@@ -11,6 +11,11 @@ import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { ContainerComponent } from './pages/container/container.component';
+import { AuthService } from './pages/services/auth.service';
 
 @NgModule({
   imports: [
@@ -24,8 +29,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NzSelectModule,
     NzModalModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
-  providers: [NzNotificationService]
+  providers: [NzNotificationService, AuthService],
+  declarations: [LoginComponent, ForgotPasswordComponent, ContainerComponent]
 })
 export class AuthModule {}
