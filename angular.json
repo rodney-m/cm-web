@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "admin-portal": "apps/admin-portal",
+    "admin-portal-e2e": "apps/admin-portal-e2e"
+  }
+}
