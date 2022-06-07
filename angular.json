@@ -7,7 +7,9 @@
     "auth": "libs/auth",
     "core": "libs/core",
     "layout": "libs/layout",
+    "usermanagement": "libs/usermanagement",
     "website": "apps/website",
-    "website-e2e": "apps/website-e2e"
+    "website-e2e": "apps/website-e2e",
+    "website-layout": "libs/website-layout"
   }
 }

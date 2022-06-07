@@ -15,10 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@env/*": ["environments/*"],
       "@christ-embassy/auth": ["libs/auth/src/index.ts"],
       "@christ-embassy/core": ["libs/core/src/index.ts"],
-      "@christ-embassy/layout": ["libs/layout/src/index.ts"]
+      "@christ-embassy/layout": ["libs/layout/src/index.ts"],
+      "@christ-embassy/usermanagement": ["libs/usermanagement/src/index.ts"],
+      "@christ-embassy/website-layout": ["libs/website-layout/src/index.ts"],
+      "@env/*": ["environments/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

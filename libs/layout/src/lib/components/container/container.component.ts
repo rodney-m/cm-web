@@ -19,7 +19,7 @@ export class ContainerComponent implements OnInit {
   getTitle(){
     this.router.events.subscribe(data => {
       if (data instanceof ActivationStart) {
-        this.title = "InstaPay Client Portal";
+        this.title = "Christ Embassy Admin Portal";
       }
     });
 

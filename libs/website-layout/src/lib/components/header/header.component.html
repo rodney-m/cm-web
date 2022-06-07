@@ -1,0 +1,51 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" aria-label="Fifth navbar example">
+      <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="assets/images/logo.png" height="65px" alt="christ embassy">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05"
+              aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse mx-auto" id="navbarsExample05">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" [ngClass]="{active: Router === '/'}" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/about" [ngClass]="{active: Router === '/about'}">About Us</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link">Products & Packages</a>
+                  </li> -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Ministry</a>
+                      <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                        <li><a class="dropdown-item" href="#">Cell Ministry</a></li>
+                        <li><a class="dropdown-item" href="#">Men's Ministry</a></li>
+                        <li><a class="dropdown-item" href="#">Women's Ministry</a></li>
+                        <li><a class="dropdown-item" href="#">Yam's Ministry</a></li>
+                        <li><a class="dropdown-item" href="#">Teens Ministry</a></li>
+                        <li><a class="dropdown-item" href="#">Children's Ministry</a></li>
+                      </ul>
+                    </li>
+                  <li class="nav-item">
+                      <a class="nav-link "  href="#" [ngClass]="{active: Router === '/events'}">Events</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/#" [ngClass]="{active: Router === '/partnership'}">partnership</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/#" [ngClass]="{active: Router === '/store'}">Store</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/contact" [ngClass]="{active: Router === '/contact'}">Contact Us</a>
+                  </li>
+
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>

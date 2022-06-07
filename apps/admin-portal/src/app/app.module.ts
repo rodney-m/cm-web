@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app.routing.module';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { httpInterceptor, JwtInterceptor, UiLoader } from '@christ-embassy/core';
+import { httpInterceptor,  UiLoader } from '@christ-embassy/core';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { RouterModule } from '@angular/router';
 
@@ -33,8 +33,7 @@ registerLocaleData(en);
     NgxUiLoaderHttpModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US },
-    httpInterceptor,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },],
+    { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true },],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

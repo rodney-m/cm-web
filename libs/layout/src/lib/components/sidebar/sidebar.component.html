@@ -1,16 +1,13 @@
 
 <ul nz-menu >
   <li (click)="getTitle($event)" nz-menu-item routerLink="dashboard">
+    <i nz-icon nzType="line-chart" nzTheme="outline"></i>
     <span class="">Dashboard</span>
 
   </li>
-  <li (click)="getTitle($event)" nz-menu-item routerLink="transactions">
-    <i nz-icon nzType="bars" nzTheme="outline"></i>
-    <span >Transactions</span>
-  </li>
-  <li (click)="getTitle($event)" nz-menu-item routerLink="reports">
-    <i nz-icon nzType="file" nzTheme="outline"></i>
-    <span>Reports</span>
+  <li (click)="getTitle($event)" nz-menu-item routerLink="events">
+    <i nz-icon nzType="calendar" nzTheme="outline"></i>
+    <span>Events</span>
   </li>
 
   <li (click)="getTitle($event)" nz-menu-item routerLink="user-management">

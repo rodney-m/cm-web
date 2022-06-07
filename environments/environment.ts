@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export enum ApplicationApis{
-  UserManagement = '',
+  UserManagement = 'https://cm-usermanagement-api.onrender.com/api/v1',
 }
 
 /*

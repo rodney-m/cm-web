@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/website-layout/src",
+  "prefix": "christ-embassy",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/website-layout"],
+      "options": {
+        "jestConfig": "libs/website-layout/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/website-layout/**/*.ts",
+          "libs/website-layout/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,9 +1,21 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@christ-embassy/core';
+import { ContainerComponent } from '@christ-embassy/layout';
 
-const routes : Routes = [    
+const routes : Routes = [
     { path: 'auth', loadChildren: () => import('@christ-embassy/auth').then(c => c.AuthModule) },
-    { path: '', loadChildren: () => import('@christ-embassy/layout').then(c => c.LayoutModule) },
+    {
+      path: '',
+      component: ContainerComponent,
+      canActivate:[AuthGuard],
+      children: [
+        {
+          path: 'user-management', loadChildren: () => import('@christ-embassy/usermanagement').then(c => c.UsermanagementModule)
+        }
+      ]
+    }
+
 ]
 
 @NgModule({

@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/admin-portal",
         "index": "apps/admin-portal/src/index.html",
@@ -93,9 +91,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/admin-portal"
-      ],
+      "outputs": ["coverage/apps/admin-portal"],
       "options": {
         "jestConfig": "apps/admin-portal/jest.config.ts",
         "passWithNoTests": true

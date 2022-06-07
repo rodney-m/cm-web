@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TokenService } from '@christ-embassy/core';
 import { AuthService } from '../services/auth.service';
-import { NgxUiLoaderService } from "ngx-ui-loader"; 
+import { NgxUiLoaderService } from "ngx-ui-loader";
+import { UsermanagementService } from '../../services/usermanagement.service';
 
 
 @Component({
@@ -14,11 +15,11 @@ import { NgxUiLoaderService } from "ngx-ui-loader";
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   username:any;
-  isLoadingOne = false;
+  isLoading = false;
   constructor(
-    private formBuilder: FormBuilder, 
-    private authService: AuthService, 
-    private tokenService : TokenService, 
+    private formBuilder: FormBuilder,
+    private service: UsermanagementService,
+    private tokenService : TokenService,
     private router: Router,
     private uiloader: NgxUiLoaderService) {}
 
@@ -34,6 +35,21 @@ export class LoginComponent implements OnInit {
 
   submitForm(){
 
-    
+    this.isLoading = true
+    this.service.postToUrl('/Account/login', this.loginForm.value).subscribe({
+      next:(res:any) => {
+        console.log(res)
+        this.tokenService.setToken(res.data.token)
+      },
+      error:(err:any) => {
+        console.log(err)
+        this.isLoading = false;
+      },
+      complete:() => {
+        this.isLoading = false
+        this.router.navigateByUrl('/')
+        console.log("done")
+      },
+    })
   }
 }
