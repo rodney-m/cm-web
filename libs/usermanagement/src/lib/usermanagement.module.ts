@@ -11,11 +11,13 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzTagModule } from 'ng-zorro-antd/tag';
 
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 @NgModule({
   imports: [
@@ -29,7 +31,9 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
     NzFormModule,
     NzInputModule,
     NzSelectModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzTableModule,
+    NzTagModule
   ],
   declarations: [UsersListComponent, UsersFormComponent],
 })

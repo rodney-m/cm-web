@@ -11,12 +11,28 @@ import { UsersFormComponent } from '../users-form/users-form.component';
   styleUrls: ['./users-list.component.scss'],
 })
 export class UsersListComponent implements OnInit {
+  users : any;
+
+
   constructor(private modalService: NzModalService,
     private usermanagementService: UsermanagementService,
     private notification: NzNotificationService
     ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllAccounts()
+  }
+
+  getAllAccounts(){
+    this.usermanagementService.getFromUrl('/Account').subscribe({
+      next: (res) => {
+        this.users = res.data;
+      },
+      error: (err) => {
+        this.notification.error('Error Occured', err.messages[0])
+      }
+    })
+  }
 
   openModal(){
     this.modalService.create({
@@ -49,6 +65,7 @@ export class UsersListComponent implements OnInit {
         this.notification.error('Error Occured', 'Error Occurred')
       },
       complete: () => {
+        this.getAllAccounts()
       }
     })
   }

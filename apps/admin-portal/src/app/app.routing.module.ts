@@ -12,7 +12,10 @@ const routes : Routes = [
       children: [
         {
           path: 'user-management', loadChildren: () => import('@christ-embassy/usermanagement').then(c => c.UsermanagementModule)
-        }
+        },
+        {
+          path: 'events', loadChildren: () => import('@christ-embassy/events').then(c => c.EventsModule)
+        },
       ]
     }
 

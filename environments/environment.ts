@@ -8,6 +8,7 @@ export const environment = {
 
 export enum ApplicationApis{
   UserManagement = 'https://cm-usermanagement-api.onrender.com/api/v1',
+  EventsService = 'https://ce-eventplanner-api.onrender.com/api/v1'
 }
 
 /*

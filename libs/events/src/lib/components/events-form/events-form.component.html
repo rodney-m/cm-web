@@ -1,0 +1,29 @@
+<form nz-form [formGroup]="form" (ngSubmit)="submitForm()">
+  <div class="row">
+
+    <angular-file-uploader
+    [config]="afuConfig">
+</angular-file-uploader>
+
+    <nz-form-item>
+
+      <nz-form-control nzErrorTip="Please input event title!">
+          <input formControlName="title" nz-input placeholder="Event title" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+
+      <nz-form-control nzErrorTip="Please input event description!">
+          <input formControlName="description" nz-input type="text" placeholder="Event description" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input event date!">
+        <nz-date-picker formControlName="eventDate"></nz-date-picker>
+      </nz-form-control>
+    </nz-form-item>
+
+  </div>
+
+</form>

@@ -28,7 +28,6 @@ export class UsersFormComponent implements OnInit {
       phoneNumber: ['', Validators.required],
       roleId: [0, Validators.required]
     })
-
   }
 
   getRoles(){

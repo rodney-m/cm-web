@@ -1,0 +1,31 @@
+<div class="wrapper py-4">
+  <button nz-button nzType="primary" class="d-block mx-auto my-4" (click)="openModal()">
+    <i nz-icon nzType="calendar"></i>
+    Add
+  </button>
+
+  <nz-table #eventsTable [nzData]="eventsList">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of eventsTable.data">
+        <td>{{ data.title }}</td>
+        <td>{{ data.description }}</td>
+        <td>{{ data.eventDate | date :'shortDate' }}</td>
+        <td>
+          <button nz-button nzType="primary" nzShape="round" class="mx-3"><i nz-icon nzType="edit"></i></button>
+          <button (click)="showDeleteConfirm(data.id)" nz-button nzType="primary" nzDanger nzShape="round"><i nz-icon nzType="delete"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+
+
+</div>
+

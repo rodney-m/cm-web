@@ -17,6 +17,7 @@
     "paths": {
       "@christ-embassy/auth": ["libs/auth/src/index.ts"],
       "@christ-embassy/core": ["libs/core/src/index.ts"],
+      "@christ-embassy/events": ["libs/events/src/index.ts"],
       "@christ-embassy/layout": ["libs/layout/src/index.ts"],
       "@christ-embassy/usermanagement": ["libs/usermanagement/src/index.ts"],
       "@christ-embassy/website-layout": ["libs/website-layout/src/index.ts"],

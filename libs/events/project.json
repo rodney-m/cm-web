@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/events/src",
+  "prefix": "christ-embassy",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/events"],
+      "options": {
+        "jestConfig": "libs/events/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/events/**/*.ts", "libs/events/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

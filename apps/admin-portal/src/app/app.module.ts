@@ -17,6 +17,7 @@ import { httpInterceptor,  UiLoader } from '@christ-embassy/core';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { RouterModule } from '@angular/router';
 
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 registerLocaleData(en);
 
@@ -31,6 +32,7 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NgxUiLoaderModule.forRoot(UiLoader.load()),
     NgxUiLoaderHttpModule,
+    AngularFileUploaderModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US },
     { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true },],

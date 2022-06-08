@@ -6,6 +6,7 @@
     "admin-portal-e2e": "apps/admin-portal-e2e",
     "auth": "libs/auth",
     "core": "libs/core",
+    "events": "libs/events",
     "layout": "libs/layout",
     "usermanagement": "libs/usermanagement",
     "website": "apps/website",
